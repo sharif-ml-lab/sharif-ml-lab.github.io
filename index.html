@@ -1043,140 +1043,190 @@
     <div class="container">
         <h2 class="mb-5"> Projects </h2>
 
-        <!-- Compositional Generation -->
-        <h3 class="mt-4 mb-3" data-toggle="collapse" data-target="#compositional-generation" aria-expanded="false" aria-controls="compositional-generation" style="cursor: pointer;">
-            Compositional Generation <i class="ti-angle-down ml-2"></i>
+        <!-- 1. Out-of-Distribution (OoD) Generalization -->
+        <h3 class="mt-4 mb-3" data-toggle="collapse" data-target="#ood-generalization" aria-expanded="false" aria-controls="ood-generalization" style="cursor: pointer;">
+            Out-of-Distribution (OoD) Generalization <i class="ti-angle-down ml-2"></i>
         </h3>
-        <div class="collapse" id="compositional-generation">
-            
-            <!-- Text-to-Image Models -->
-            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#t2i-models" aria-expanded="false" aria-controls="t2i-models" style="cursor: pointer;">
-                Text-to-Image Models <i class="ti-angle-down ml-2"></i>
+        <div class="collapse" id="ood-generalization">
+            <p class="ml-3 mb-3 text-muted"><em>Building models that generalize beyond training distributions.</em></p>
+
+            <!-- Robustness to Spurious Correlation -->
+            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#spurious-correlation" aria-expanded="false" aria-controls="spurious-correlation" style="cursor: pointer;">
+                Robustness to Spurious Correlation <i class="ti-angle-down ml-2"></i>
             </h5>
-            <div class="collapse ml-4" id="t2i-models">
+            <div class="collapse ml-4" id="spurious-correlation">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <p>In recent years, text-to-image (T2I) diffusion models such as Stable Diffusion and DALL-E have shown promising performance in generating realistic, creative, diverse, and high-quality images from textual descriptions. These models leverage the iterative denoising process and text embeddings through the cross-attention mechanism to generate images used in many applications across various domains.</p>
+                        <p>We develop frameworks that mitigate shortcut learning. Our methods improve robustness under subpopulation shifts by mitigating reliance on confounding signals and non-causal signals. Crucially, we address realistic settings in which spurious correlations are unknown or unlabeled, introducing approaches that achieve strong group robustness without requiring explicit group annotations.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Compositional Misalignments -->
-            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#comp-misalign" aria-expanded="false" aria-controls="comp-misalign" style="cursor: pointer;">
-                Compositional Misalignments <i class="ti-angle-down ml-2"></i>
+            <!-- OoD Generalization in RL -->
+            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#ood-rl" aria-expanded="false" aria-controls="ood-rl" style="cursor: pointer;">
+                OoD Generalization in (Language-Informed) Reinforcement Learning <i class="ti-angle-down ml-2"></i>
             </h5>
-            <div class="collapse ml-4" id="comp-misalign">
+            <div class="collapse ml-4" id="ood-rl">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <p>Despite impressive capabilities, T2I models often struggle to faithfully capture all the entities, attributes, and relationships described in the input prompt, leading to various compositional misalignments such as entity missing, improper attribute binding, wrong spatial relationships, and counting problems.</p>
+                        <p>We study how language abstractions and compositional representations can guide reinforcement learning agents toward robust generalization across unseen environments, enabling more transferable policies.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Research Goal -->
-            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#comp-goal" aria-expanded="false" aria-controls="comp-goal" style="cursor: pointer;">
-                Research Goal <i class="ti-angle-down ml-2"></i>
+            <!-- Compositional Generalization and Complex OoD -->
+            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#comp-ood" aria-expanded="false" aria-controls="comp-ood" style="cursor: pointer;">
+                Compositional Generalization and Complex OoD <i class="ti-angle-down ml-2"></i>
             </h5>
-            <div class="collapse ml-4" id="comp-goal">
+            <div class="collapse ml-4" id="comp-ood">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <p>We aim to add compositional generation capability into T2I models to overcome the mentioned compositional generation failure modes and enable more accurate and faithful image generation from complex textual descriptions.</p>
+                        <p>We tackle challenging out-of-distribution settings in which shifts arise from novel compositions of previously seen concepts. Our work introduces principled benchmarks and learning methods that both evaluate and improve model robustness under compositional distribution shifts and complex OoD scenarios.</p>
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <!-- Spurious Correlation -->
-        <h3 class="mt-5 mb-3" data-toggle="collapse" data-target="#spurious-correlation" aria-expanded="false" aria-controls="spurious-correlation" style="cursor: pointer;">
-            Spurious Correlation <i class="ti-angle-down ml-2"></i>
+        <!-- 2. Compositional Text-to-Image Generation -->
+        <h3 class="mt-5 mb-3" data-toggle="collapse" data-target="#comp-t2i" aria-expanded="false" aria-controls="comp-t2i" style="cursor: pointer;">
+            Compositional Text-to-Image Generation <i class="ti-angle-down ml-2"></i>
         </h3>
-        <div class="collapse" id="spurious-correlation">
-            
-            <!-- Problem Definition -->
-            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#spurious-problem" aria-expanded="false" aria-controls="spurious-problem" style="cursor: pointer;">
-                Problem Definition <i class="ti-angle-down ml-2"></i>
+        <div class="collapse" id="comp-t2i">
+            <div class="card mb-3 ml-3">
+                <div class="card-body">
+                    <p><em>Enabling generative models to faithfully compose multiple objects, attributes, and relations:</em></p>
+                    <p>We design test-time strategies that improve compositional control in text-to-image generation. Our work targets failures such as object missing, attribute binding, and relational problems, introducing mechanisms that enforce structured binding between textual descriptions and visual elements. The result is more reliable generation under complex, multi-object prompts.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Compositionality and Vision-Language Models (VLMs) -->
+        <h3 class="mt-5 mb-3" data-toggle="collapse" data-target="#comp-vlm" aria-expanded="false" aria-controls="comp-vlm" style="cursor: pointer;">
+            Compositionality and Vision-Language Models (VLMs) <i class="ti-angle-down ml-2"></i>
+        </h3>
+        <div class="collapse" id="comp-vlm">
+
+            <!-- Visual Reasoning -->
+            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#visual-reasoning" aria-expanded="false" aria-controls="visual-reasoning" style="cursor: pointer;">
+                Visual Reasoning <i class="ti-angle-down ml-2"></i>
             </h5>
-            <div class="collapse ml-4" id="spurious-problem">
+            <div class="collapse ml-4" id="visual-reasoning">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <p>Spurious correlations occur when machine learning models learn to rely on superficial patterns or biases in the training data rather than the true underlying relationships. This can lead to poor generalization and biased predictions in real-world scenarios.</p>
+                        <p>We propose benchmarks and methods to probe multi-step reasoning and relational understanding. We introduce approaches that strengthen compositional reasoning over complex visual scenes and propose visual reasoning methods for LVLMs.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Research Focus -->
-            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#spurious-focus" aria-expanded="false" aria-controls="spurious-focus" style="cursor: pointer;">
-                Research Focus <i class="ti-angle-down ml-2"></i>
+            <!-- Understanding Compositional Capabilities of VLMs -->
+            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#comp-capabilities" aria-expanded="false" aria-controls="comp-capabilities" style="cursor: pointer;">
+                Understanding Compositional Capabilities of VLMs <i class="ti-angle-down ml-2"></i>
             </h5>
-            <div class="collapse ml-4" id="spurious-focus">
+            <div class="collapse ml-4" id="comp-capabilities">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <p>Our research focuses on developing methods to identify and mitigate spurious correlations in machine learning models, enabling more robust and reliable predictions across diverse datasets and domains.</p>
+                        <p><em>Representational analysis of VLMs:</em> We introduce datasets and conduct fine-grained analyses of how CLIP represents objects, attributes, and their interactions. By dissecting internal representations, we identify where compositionality emerges—and where it breaks—providing actionable insights for improving model design and training.</p>
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <!-- Generalization -->
-        <h3 class="mt-5 mb-3" data-toggle="collapse" data-target="#generalization" aria-expanded="false" aria-controls="generalization" style="cursor: pointer;">
-            Generalization <i class="ti-angle-down ml-2"></i>
+        <!-- 4. Interpretability -->
+        <h3 class="mt-5 mb-3" data-toggle="collapse" data-target="#interpretability" aria-expanded="false" aria-controls="interpretability" style="cursor: pointer;">
+            Interpretability <i class="ti-angle-down ml-2"></i>
         </h3>
-        <div class="collapse" id="generalization">
-            
-            <!-- Out-of-Distribution -->
-            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#ood-gen" aria-expanded="false" aria-controls="ood-gen" style="cursor: pointer;">
-                Out-of-Distribution Generalization <i class="ti-angle-down ml-2"></i>
+        <div class="collapse" id="interpretability">
+
+            <!-- Mechanistic Interpretability -->
+            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#mech-interp" aria-expanded="false" aria-controls="mech-interp" style="cursor: pointer;">
+                Mechanistic Interpretability of LLMs and LVLMs <i class="ti-angle-down ml-2"></i>
             </h5>
-            <div class="collapse ml-4" id="ood-gen">
+            <div class="collapse ml-4" id="mech-interp">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <p>Investigating how machine learning models can maintain performance when encountering data distributions that differ from the training distribution, which is crucial for real-world deployment scenarios.</p>
+                        <p><em>Understanding how LLMs and VLMs compute in visual and textual reasoning problems:</em> We develop intervention-based and mechanistic tools to trace how semantic functions are formed and transferred across layers in these models. Our work moves beyond post-hoc explanations toward causal, computation-level understanding of linguistic or multimodal reasoning.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Domain Adaptation -->
-            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#domain-adapt" aria-expanded="false" aria-controls="domain-adapt" style="cursor: pointer;">
-                Domain Adaptation <i class="ti-angle-down ml-2"></i>
+            <!-- Vision Transformer Attribution -->
+            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#vit-attribution" aria-expanded="false" aria-controls="vit-attribution" style="cursor: pointer;">
+                Vision Transformer Attribution <i class="ti-angle-down ml-2"></i>
             </h5>
-            <div class="collapse ml-4" id="domain-adapt">
+            <div class="collapse ml-4" id="vit-attribution">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <p>Developing techniques to transfer knowledge learned from one domain to another, enabling models to adapt and perform well across different but related domains with minimal additional training.</p>
+                        <p><em>Reliable and faithful attribution methods:</em> We introduce new attribution techniques for Vision Transformers. Our methods address known failure modes of existing attribution approaches and provide more stable, interpretable explanations of model decisions.</p>
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <!-- Reinforcement Learning -->
-        <h3 class="mt-5 mb-3" data-toggle="collapse" data-target="#reinforcement-learning" aria-expanded="false" aria-controls="reinforcement-learning" style="cursor: pointer;">
-            Reinforcement Learning <i class="ti-angle-down ml-2"></i>
+        <!-- 5. Large Language Models (LLMs) -->
+        <h3 class="mt-5 mb-3" data-toggle="collapse" data-target="#llms" aria-expanded="false" aria-controls="llms" style="cursor: pointer;">
+            Large Language Models (LLMs) <i class="ti-angle-down ml-2"></i>
         </h3>
-        <div class="collapse" id="reinforcement-learning">
-            
-            <!-- Model-Based RL -->
-            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#model-based-rl" aria-expanded="false" aria-controls="model-based-rl" style="cursor: pointer;">
-                Model-Based Approaches <i class="ti-angle-down ml-2"></i>
+        <div class="collapse" id="llms">
+
+            <!-- Persian Benchmarks -->
+            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#persian-bench" aria-expanded="false" aria-controls="persian-bench" style="cursor: pointer;">
+                Persian Benchmarks <i class="ti-angle-down ml-2"></i>
             </h5>
-            <div class="collapse ml-4" id="model-based-rl">
+            <div class="collapse ml-4" id="persian-bench">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <p>Exploring reinforcement learning methods that build and leverage internal models of the environment to plan and make decisions, improving sample efficiency and enabling better long-term planning.</p>
+                        <p><em>Advancing multilingual and low-resource NLP:</em> We introduce high-quality Persian benchmarks covering reasoning, generation, and evaluation, enabling rigorous assessment of LLM capabilities beyond English-centric settings.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Multi-Agent Systems -->
-            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#multi-agent" aria-expanded="false" aria-controls="multi-agent" style="cursor: pointer;">
-                Multi-Agent Systems <i class="ti-angle-down ml-2"></i>
+            <!-- Reasoning -->
+            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#llm-reasoning" aria-expanded="false" aria-controls="llm-reasoning" style="cursor: pointer;">
+                Reasoning <i class="ti-angle-down ml-2"></i>
             </h5>
-            <div class="collapse ml-4" id="multi-agent">
+            <div class="collapse ml-4" id="llm-reasoning">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <p>Research on systems where multiple agents interact, cooperate, or compete to achieve individual or collective goals, with applications in robotics, game theory, and distributed systems.</p>
+                        <p><em>Systematic and compositional reasoning in LLMs:</em> We study how LLMs perform multi-step reasoning, identify failure modes, and propose methods to improve logical consistency and generalization across reasoning tasks.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LLM Agents -->
+            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#llm-agents" aria-expanded="false" aria-controls="llm-agents" style="cursor: pointer;">
+                LLM Agents <i class="ti-angle-down ml-2"></i>
+            </h5>
+            <div class="collapse ml-4" id="llm-agents">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <p><em>Autonomous decision-making with LLMs:</em> We explore LLM-based agents that interact with environments, tools, and users, studying planning, memory, and coordination in long-horizon tasks.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scientific Discovery -->
+            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#sci-discovery" aria-expanded="false" aria-controls="sci-discovery" style="cursor: pointer;">
+                Scientific Discovery <i class="ti-angle-down ml-2"></i>
+            </h5>
+            <div class="collapse ml-4" id="sci-discovery">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <p><em>LLMs as tools for scientific discovery:</em> We investigate how language models can assist in idea generation, pattern discovery, and scientific reasoning, with applications across scientific domains.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Faithfulness of Chain-of-Thought -->
+            <h5 class="mt-3 mb-2 ml-3" data-toggle="collapse" data-target="#cot-faith" aria-expanded="false" aria-controls="cot-faith" style="cursor: pointer;">
+                Faithfulness of Chain-of-Thought <i class="ti-angle-down ml-2"></i>
+            </h5>
+            <div class="collapse ml-4" id="cot-faith">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <p><em>Safety and trustworthiness of LLMs:</em> We analyze deceptive behaviors in LLMs, studying when and why models produce misleading outputs, and propose evaluation frameworks to better understand and mitigate such risks.</p>
                     </div>
                 </div>
             </div>
