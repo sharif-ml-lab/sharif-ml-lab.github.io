@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sharif-ml-lab.github.io/sitemap.xml
