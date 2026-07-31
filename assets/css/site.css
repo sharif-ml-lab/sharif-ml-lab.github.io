@@ -53,11 +53,11 @@ address { font-style: normal; }
 .section-heading h2, .positions-panel h2, .contact-section h2 {
   margin-bottom: 18px;
   color: var(--navy-950);
-  font-size: clamp(2.25rem, 4.8vw, 4rem);
+  font-size: clamp(2.1rem, 3.8vw, 3.2rem);
   font-weight: 720;
 }
 .section-heading > p:last-child { margin-bottom: 0; font-size: 1.08rem; }
-.split-heading { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr); gap: 72px; max-width: none; align-items: end; }
+.split-heading { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr); gap: 56px; max-width: none; align-items: end; }
 .split-heading > p { margin-bottom: 5px; }
 .eyebrow {
   margin-bottom: 17px;
@@ -100,7 +100,7 @@ address { font-style: normal; }
 .hero-pattern { position: absolute; z-index: -1; inset: 0; opacity: .2; background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px); background-size: 64px 64px; mask-image: linear-gradient(to right, transparent 28%, black); }
 .hero-content { padding-top: 90px; }
 .hero-content .eyebrow { color: var(--gold-400) !important; }
-.hero h1 { max-width: 920px; margin-bottom: 28px; font-size: clamp(4rem, 9.5vw, 8rem); font-weight: 760; letter-spacing: -.065em; line-height: .89; }
+.hero h1 { max-width: 920px; margin-bottom: 28px; font-size: clamp(3.8rem, 8.2vw, 7rem); font-weight: 760; letter-spacing: -.06em; line-height: .91; }
 .hero h1 span { color: var(--gold-400); }
 .hero-lead { max-width: 750px; margin-bottom: 38px; color: rgba(255,255,255,.78); font-size: clamp(1.1rem, 2vw, 1.35rem); line-height: 1.6; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
@@ -148,6 +148,21 @@ address { font-style: normal; }
 .people-section .card-body:empty::after { content: "Profile details coming soon"; color: #8591a0; font-size: .78rem; }
 .people-section .card-body a { margin: 0 !important; padding: 5px 9px; color: var(--navy-700); background: var(--mist); border-radius: 999px; font-size: .72rem; font-weight: 680; }
 .people-section .card-body a:hover { color: white; background: var(--navy-800); }
+.people-section .card-body a::before, .contact-links a::before {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-right: 6px;
+  vertical-align: -2px;
+  background: currentColor;
+  mask: var(--service-icon) center / contain no-repeat;
+  -webkit-mask: var(--service-icon) center / contain no-repeat;
+}
+.people-section a[title="Email"] { --service-icon: url("../icons/email.svg"); }
+.people-section a[title="Scholar"], .people-section a[title="Google Scholar"] { --service-icon: url("../icons/scholar.svg"); }
+.people-section a[title="GitHub"] { --service-icon: url("../icons/github.svg"); }
+.people-section a[title="LinkedIn"] { --service-icon: url("../icons/linkedin.svg"); }
 .people-section .card-body a::after { content: attr(title); }
 .people-section .card-body i { display: none; }
 .people-section .mt-2 { margin: 0; }
@@ -166,8 +181,8 @@ address { font-style: normal; }
 .research-card summary::after { content: "+"; position: absolute; right: 8px; top: 30px; width: 30px; height: 30px; display: grid; place-items: center; color: var(--gold-400); border: 1px solid rgba(255,255,255,.25); border-radius: 50%; }
 .research-card[open] summary::after { content: "−"; }
 .research-number { padding-top: 5px; color: var(--gold-400); font-size: .73rem; font-weight: 800; letter-spacing: .12em; }
-.research-card summary strong { display: block; color: white; font-size: clamp(1.25rem, 2.7vw, 2rem); line-height: 1.2; }
-.research-card summary small { display: block; margin-top: 9px; color: rgba(255,255,255,.55); font-size: .91rem; }
+.research-card summary strong { display: block; color: white; font-size: clamp(1.15rem, 1.8vw, 1.75rem); line-height: 1.25; }
+.research-card summary small { display: block; margin-top: 8px; color: rgba(255,255,255,.62); font-size: 1rem; line-height: 1.5; }
 .research-body { padding: 0 70px 30px; max-width: 930px; }
 .research-body h3 { margin: 22px 0 7px; color: var(--gold-400); font-size: .88rem; letter-spacing: .02em; }
 .research-body p { margin: 0; color: rgba(255,255,255,.69); }
@@ -186,7 +201,7 @@ address { font-style: normal; }
 /* Publications, positions, contact */
 .publication-section { padding: 0; background: var(--warm); }
 .publication-panel { min-height: 360px; display: flex; align-items: center; justify-content: space-between; gap: 60px; padding: 64px; color: white; background: linear-gradient(130deg, var(--navy-800), var(--navy-950)); border-radius: var(--radius-lg); }
-.publication-panel h2 { margin-bottom: 18px; color: white; font-size: clamp(2.2rem, 4.5vw, 3.8rem); }
+.publication-panel h2 { margin-bottom: 18px; color: white; font-size: clamp(2.1rem, 3.8vw, 3.2rem); }
 .publication-panel p:not(.eyebrow) { max-width: 660px; margin: 0; color: rgba(255,255,255,.65); }
 .publication-panel .button { flex: 0 0 auto; }
 .positions-section { padding-top: 128px; background: var(--warm); }
@@ -196,16 +211,20 @@ address { font-style: normal; }
 .positions-panel p { margin: 0; }
 .contact-section { color: white; background: var(--navy-950); }
 .contact-section .eyebrow { color: var(--gold-400) !important; }
-.contact-section h2 { color: white; font-size: clamp(2.8rem, 6vw, 5.4rem); }
+.contact-section h2 { color: white; font-size: clamp(2.4rem, 4.5vw, 4.1rem); }
 .contact-grid { display: grid; grid-template-columns: 1.4fr .6fr; gap: 110px; align-items: end; }
 .contact-grid > div > p:not(.eyebrow) { max-width: 700px; color: rgba(255,255,255,.62); }
 .contact-email { display: inline-flex; gap: 18px; align-items: center; margin-top: 24px; color: var(--gold-400); font-size: clamp(1.15rem, 3vw, 1.8rem); font-weight: 720; border-bottom: 1px solid rgba(244,181,86,.4); }
+.contact-email::before { content: ""; flex: 0 0 auto; width: .9em; height: .9em; background: currentColor; mask: url("../icons/email.svg") center / contain no-repeat; -webkit-mask: url("../icons/email.svg") center / contain no-repeat; }
 .contact-email:hover { color: white; }
 .contact-grid address { display: flex; flex-direction: column; padding: 28px; color: white; border: 1px solid rgba(255,255,255,.15); border-radius: var(--radius-md); }
 .contact-grid address strong { margin-bottom: 10px; }
 .contact-grid address > span { color: rgba(255,255,255,.57); font-size: .9rem; }
 .contact-links { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.13); }
 .contact-links a { color: var(--gold-400); font-size: .8rem; font-weight: 700; }
+.contact-links a[href*="github.com"] { --service-icon: url("../icons/github.svg"); }
+.contact-links a[href*="youtube.com"] { --service-icon: url("../icons/youtube.svg"); }
+.contact-links a[href*="t.me"] { --service-icon: url("../icons/telegram.svg"); }
 
 /* Footer */
 .site-footer { padding: 28px 0; background: #041323; border-top: 1px solid rgba(255,255,255,.08); }
