@@ -106,6 +106,56 @@
     </div>
 </section>
 
+<section class="section research-section" id="projects">
+    <div class="container">
+        <div class="section-heading split-heading">
+            <div><p class="eyebrow">Research</p><h2>Questions that drive our work</h2></div>
+            <p>We study how learning systems represent knowledge, reason over complex inputs, and remain dependable when the world differs from their training data.</p>
+        </div>
+        <div class="research-grid">
+            <details class="research-card" open>
+                <summary><span><strong>Out-of-Distribution Generalization</strong><small>Building models that generalize beyond training distributions.</small></span></summary>
+                <div class="research-body">
+                    <h3>Robustness to Spurious Correlation</h3>
+                    <p>We develop frameworks that mitigate shortcut learning and improve robustness under subpopulation shifts, including realistic settings where spurious correlations are unknown or unlabeled.</p>
+                    <h3>Language-Informed Reinforcement Learning</h3>
+                    <p>We study how language abstractions and compositional representations can guide agents toward robust performance in unseen environments.</p>
+                    <h3>Compositional and Complex OoD</h3>
+                    <p>We create benchmarks and learning methods for shifts formed by novel compositions of previously seen concepts.</p>
+                </div>
+            </details>
+            <details class="research-card">
+                <summary><span><strong>Compositional Text-to-Image Generation</strong><small>Faithfully composing objects, attributes, and relations.</small></span></summary>
+                <div class="research-body"><p>We design test-time strategies that improve compositional control in text-to-image generation. Our work addresses missing objects, attribute binding, and relational failures by enforcing stronger alignment between textual descriptions and visual elements.</p></div>
+            </details>
+            <details class="research-card">
+                <summary><span><strong>Vision-Language Models</strong><small>Compositional understanding and visual reasoning.</small></span></summary>
+                <div class="research-body">
+                    <h3>Visual Reasoning</h3><p>We develop benchmarks and methods that probe multi-step reasoning and relational understanding in large vision-language models.</p>
+                    <h3>Representational Analysis</h3><p>We examine how models such as CLIP represent objects, attributes, and their interactions to identify where compositionality emerges—and where it breaks.</p>
+                </div>
+            </details>
+            <details class="research-card">
+                <summary><span><strong>Interpretability</strong><small>Tracing and explaining computations inside modern models.</small></span></summary>
+                <div class="research-body">
+                    <h3>Mechanistic Interpretability</h3><p>We develop intervention-based tools to trace how semantic functions form and transfer across layers in language and vision-language models.</p>
+                    <h3>Vision Transformer Attribution</h3><p>We introduce more stable and faithful attribution techniques that address known failure modes in transformer explanations.</p>
+                </div>
+            </details>
+            <details class="research-card">
+                <summary><span><strong>Large Language Models</strong><small>Reasoning, agency, safety, and scientific discovery.</small></span></summary>
+                <div class="research-body research-columns">
+                    <div><h3>Persian Benchmarks</h3><p>High-quality evaluation resources for reasoning and generation in a low-resource language.</p></div>
+                    <div><h3>Reasoning</h3><p>Methods for more systematic, compositional, and logically consistent multi-step reasoning.</p></div>
+                    <div><h3>LLM Agents</h3><p>Planning, memory, tool use, and coordination in long-horizon environments.</p></div>
+                    <div><h3>Scientific Discovery</h3><p>Language models as tools for idea generation, pattern discovery, and scientific reasoning.</p></div>
+                    <div><h3>Chain-of-Thought Faithfulness</h3><p>Evaluation of deceptive or misleading reasoning behavior in language models.</p></div>
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
 <!-- People Section-->
 <section class="section people-section" id="people">
     <div class="container">
@@ -131,8 +181,8 @@
         </div>
 
         <!-- PhD Students -->
-        <h3 class="mt-5 mb-3" data-toggle="collapse" data-target="#phd-students" aria-expanded="false" aria-controls="phd-students" style="cursor: pointer;">
-            PhD Students <i class="ti-angle-down ml-2 collapse-icon"></i>
+        <h3 class="people-group-heading mt-5 mb-3">
+            <button class="people-toggle" type="button" data-toggle="collapse" data-target="#phd-students" aria-expanded="false" aria-controls="phd-students">PhD Students <i class="ti-angle-down ml-2 collapse-icon" aria-hidden="true"></i></button>
         </h3>
         <div class="collapse" id="phd-students">
             <div class="row">
@@ -175,7 +225,7 @@
                     <div class="card-header">
                       <div class="mt-2">
                         <h4>Negin Hashemi Dijujin</h4>
-                        <p class="member-project">Out-of-Disteubution (OoD) Generalization in RL</p>
+                        <p class="member-project">Out-of-Distribution (OoD) Generalization in RL</p>
                       </div>
                     </div>
                     <div class="card-body">
@@ -202,8 +252,8 @@
         </div>
 
         <!-- MSc Students -->
-        <h3 class="mt-5 mb-3" data-toggle="collapse" data-target="#msc-students" aria-expanded="false" aria-controls="msc-students" style="cursor: pointer;">
-            MSc Students <i class="ti-angle-down ml-2 collapse-icon"></i>
+        <h3 class="people-group-heading mt-5 mb-3">
+            <button class="people-toggle" type="button" data-toggle="collapse" data-target="#msc-students" aria-expanded="false" aria-controls="msc-students">MSc Students <i class="ti-angle-down ml-2 collapse-icon" aria-hidden="true"></i></button>
         </h3>
         <div class="collapse" id="msc-students">
             <div class="row">
@@ -339,8 +389,8 @@
         </div>
 
         <!-- PhD Alumni -->
-        <h3 class="mt-5 mb-3" data-toggle="collapse" data-target="#phd-alumni" aria-expanded="false" aria-controls="phd-alumni" style="cursor: pointer;">
-            PhD Alumni <i class="ti-angle-down ml-2 collapse-icon"></i>
+        <h3 class="people-group-heading mt-5 mb-3">
+            <button class="people-toggle" type="button" data-toggle="collapse" data-target="#phd-alumni" aria-expanded="false" aria-controls="phd-alumni">PhD Alumni <i class="ti-angle-down ml-2 collapse-icon" aria-hidden="true"></i></button>
         </h3>
         <div class="collapse" id="phd-alumni">
             <div class="row">
@@ -413,8 +463,8 @@
         </div>
 
         <!-- MSc Alumni -->
-        <h3 class="mt-5 mb-3" data-toggle="collapse" data-target="#msc-alumni" aria-expanded="false" aria-controls="msc-alumni" style="cursor: pointer;">
-            MSc Alumni <i class="ti-angle-down ml-2 collapse-icon"></i>
+        <h3 class="people-group-heading mt-5 mb-3">
+            <button class="people-toggle" type="button" data-toggle="collapse" data-target="#msc-alumni" aria-expanded="false" aria-controls="msc-alumni">MSc Alumni <i class="ti-angle-down ml-2 collapse-icon" aria-hidden="true"></i></button>
         </h3>
         <div class="collapse" id="msc-alumni">
             <div class="row">
@@ -936,56 +986,6 @@
     </div>
 </section>
 
-<section class="section research-section" id="projects">
-    <div class="container">
-        <div class="section-heading split-heading">
-            <div><p class="eyebrow">Research</p><h2>Questions that drive our work</h2></div>
-            <p>We study how learning systems represent knowledge, reason over complex inputs, and remain dependable when the world differs from their training data.</p>
-        </div>
-        <div class="research-grid">
-            <details class="research-card" open>
-                <summary><span><strong>Out-of-Distribution Generalization</strong><small>Building models that generalize beyond training distributions.</small></span></summary>
-                <div class="research-body">
-                    <h3>Robustness to Spurious Correlation</h3>
-                    <p>We develop frameworks that mitigate shortcut learning and improve robustness under subpopulation shifts, including realistic settings where spurious correlations are unknown or unlabeled.</p>
-                    <h3>Language-Informed Reinforcement Learning</h3>
-                    <p>We study how language abstractions and compositional representations can guide agents toward robust performance in unseen environments.</p>
-                    <h3>Compositional and Complex OoD</h3>
-                    <p>We create benchmarks and learning methods for shifts formed by novel compositions of previously seen concepts.</p>
-                </div>
-            </details>
-            <details class="research-card">
-                <summary><span><strong>Compositional Text-to-Image Generation</strong><small>Faithfully composing objects, attributes, and relations.</small></span></summary>
-                <div class="research-body"><p>We design test-time strategies that improve compositional control in text-to-image generation. Our work addresses missing objects, attribute binding, and relational failures by enforcing stronger alignment between textual descriptions and visual elements.</p></div>
-            </details>
-            <details class="research-card">
-                <summary><span><strong>Vision-Language Models</strong><small>Compositional understanding and visual reasoning.</small></span></summary>
-                <div class="research-body">
-                    <h3>Visual Reasoning</h3><p>We develop benchmarks and methods that probe multi-step reasoning and relational understanding in large vision-language models.</p>
-                    <h3>Representational Analysis</h3><p>We examine how models such as CLIP represent objects, attributes, and their interactions to identify where compositionality emerges—and where it breaks.</p>
-                </div>
-            </details>
-            <details class="research-card">
-                <summary><span><strong>Interpretability</strong><small>Tracing and explaining computations inside modern models.</small></span></summary>
-                <div class="research-body">
-                    <h3>Mechanistic Interpretability</h3><p>We develop intervention-based tools to trace how semantic functions form and transfer across layers in language and vision-language models.</p>
-                    <h3>Vision Transformer Attribution</h3><p>We introduce more stable and faithful attribution techniques that address known failure modes in transformer explanations.</p>
-                </div>
-            </details>
-            <details class="research-card">
-                <summary><span><strong>Large Language Models</strong><small>Reasoning, agency, safety, and scientific discovery.</small></span></summary>
-                <div class="research-body research-columns">
-                    <div><h3>Persian Benchmarks</h3><p>High-quality evaluation resources for reasoning and generation in a low-resource language.</p></div>
-                    <div><h3>Reasoning</h3><p>Methods for more systematic, compositional, and logically consistent multi-step reasoning.</p></div>
-                    <div><h3>LLM Agents</h3><p>Planning, memory, tool use, and coordination in long-horizon environments.</p></div>
-                    <div><h3>Scientific Discovery</h3><p>Language models as tools for idea generation, pattern discovery, and scientific reasoning.</p></div>
-                    <div><h3>Chain-of-Thought Faithfulness</h3><p>Evaluation of deceptive or misleading reasoning behavior in language models.</p></div>
-                </div>
-            </details>
-        </div>
-    </div>
-</section>
-
 <section class="section courses-section" id="courses">
     <div class="container">
         <div class="section-heading"><p class="eyebrow">Teaching</p><h2>Courses</h2><p>Selected courses taught by members of the lab at Sharif University of Technology.</p></div>
@@ -1001,9 +1001,59 @@
 </section>
 
 <section class="section publication-section" id="publications">
-    <div class="container publication-panel">
-        <div><p class="eyebrow">Publications</p><h2>Discover our research output.</h2><p>Browse the complete publication record of Dr. Mahdieh Soleymani and collaborating researchers on Google Scholar.</p></div>
-        <a class="button button-light" href="https://scholar.google.com/citations?user=S1U0KlgAAAAJ&amp;hl=en&amp;oi=sra" target="_blank" rel="noopener">View Google Scholar <span aria-hidden="true">↗</span></a>
+    <div class="container">
+        <div class="section-heading split-heading publication-heading">
+            <div><p class="eyebrow">Publications</p><h2>Recent work from the lab.</h2></div>
+            <p>Selected recent publications spanning mechanistic interpretability, visual reasoning, reinforcement learning, and robust generalization.</p>
+        </div>
+        <div class="publication-grid">
+            <article class="publication-card">
+                <div class="publication-meta"><span>Mechanistic interpretability</span><span>Findings of ACL · 2026</span></div>
+                <h3><a href="https://aclanthology.org/2026.findings-acl.2031/">Mechanistic Interpretability of Large-Scale Counting in LLMs through a System-2 Strategy</a></h3>
+                <p class="publication-authors">Hosein Hasani, Mohammadali Banayeeanzade, Ali Nafisi, Sadegh Mohammadian, Fatemeh Askari, Mobin Bagherian, Amirmohammad Izadi, and Mahdieh Soleymani Baghshah</p>
+                <p class="publication-summary">Reveals how a System-2 strategy decomposes large counting problems, transfers partial counts through dedicated attention heads, and aggregates them reliably.</p>
+                <div class="publication-links"><a href="https://aclanthology.org/2026.findings-acl.2031/" aria-label="Read Mechanistic Interpretability of Large-Scale Counting in LLMs">Paper <span aria-hidden="true">↗</span></a></div>
+            </article>
+            <article class="publication-card">
+                <div class="publication-meta"><span>Reasoning</span><span>TMLR · 2026</span></div>
+                <h3><a href="https://openreview.net/forum?id=07fh13gWs0">Bridging Reasoning to Learning: Unmasking Illusions using Complexity Out-of-Distribution Generalization</a></h3>
+                <p class="publication-authors">Mahdi Samiei, Arash Marioriyad, Arman Tahmasebi-Zadeh, Mohamadreza Fereydooni, Mahdi Ghaznavai, and Mahdieh Soleymani Baghshah</p>
+                <p class="publication-summary">Frames reasoning as generalization to problems whose solutions require greater representational or computational complexity than the training examples.</p>
+                <div class="publication-links"><a href="https://openreview.net/forum?id=07fh13gWs0" aria-label="Read Bridging Reasoning to Learning">Paper <span aria-hidden="true">↗</span></a></div>
+            </article>
+            <article class="publication-card">
+                <div class="publication-meta"><span>AI safety</span><span>ICLR · 2026</span></div>
+                <h3><a href="https://openreview.net/forum?id=yNVoSoxM0u">Efficient Adversarial Attacks on High-Dimensional Offline Bandits</a></h3>
+                <p class="publication-authors">Seyed Mohammad Hadi Hosseini, Amir Najafi, and Mahdieh Soleymani Baghshah</p>
+                <p class="publication-summary">Demonstrates how small targeted perturbations to reward models can hijack offline bandits and studies a practical partial defense.</p>
+                <div class="publication-links"><a href="https://openreview.net/forum?id=yNVoSoxM0u" aria-label="Read Efficient Adversarial Attacks on High-Dimensional Offline Bandits">Paper <span aria-hidden="true">↗</span></a></div>
+            </article>
+            <article class="publication-card">
+                <div class="publication-meta"><span>Reinforcement learning</span><span>ICLR · 2026</span></div>
+                <h3><a href="https://openreview.net/forum?id=INr5TSooxR">SUSD: Structured Unsupervised Skill Discovery through State Factorization</a></h3>
+                <p class="publication-authors">Seyed Mohammad Hadi Hosseini and Mahdieh Soleymani Baghshah</p>
+                <p class="publication-summary">Factorizes environment states and skill variables to learn richer, more diverse, and compositionally reusable behaviors without rewards.</p>
+                <div class="publication-links"><a href="https://openreview.net/forum?id=INr5TSooxR" aria-label="Read SUSD: Structured Unsupervised Skill Discovery">Paper <span aria-hidden="true">↗</span></a></div>
+            </article>
+            <article class="publication-card">
+                <div class="publication-meta"><span>Visual reasoning</span><span>NeurIPS · 2025</span></div>
+                <h3><a href="https://papers.nips.cc/paper_files/paper/2025/hash/ee8351f13c3015ac249ed5f767096966-Abstract-Conference.html">Visual Structures Help Visual Reasoning: Addressing the Binding Problem in LVLMs</a></h3>
+                <p class="publication-authors">Amirmohammad Izadi, Mohammadali Banayeeanzade, Fatemeh Askari, Ali Rahimiakbar, Mohammad Mahdi Vahedi, Hosein Hasani, and Mahdieh Soleymani Baghshah</p>
+                <p class="publication-summary">Introduces VISER, which adds lightweight spatial structure and sequential-scanning prompts to improve counting, visual search, and spatial reasoning.</p>
+                <div class="publication-links"><a href="https://papers.nips.cc/paper_files/paper/2025/hash/ee8351f13c3015ac249ed5f767096966-Abstract-Conference.html" aria-label="Read Visual Structures Help Visual Reasoning">Paper <span aria-hidden="true">↗</span></a><a href="https://sharif-ml-lab.github.io/VISER/" aria-label="Visit the VISER project page">Project <span aria-hidden="true">↗</span></a></div>
+            </article>
+            <article class="publication-card">
+                <div class="publication-meta"><span>Reinforcement learning</span><span>TMLR · 2025</span></div>
+                <h3><a href="https://openreview.net/forum?id=zJUEYr5X1X">CAREL: Instruction-Guided Reinforcement Learning with Cross-Modal Auxiliary Objectives</a></h3>
+                <p class="publication-authors">Armin Saghafian, Amirmohammad Izadi, Negin Hashemi Dijujin, and Mahdieh Soleymani Baghshah</p>
+                <p class="publication-summary">Uses cross-modal auxiliary objectives and instruction tracking to improve sample efficiency and systematic generalization in language-guided reinforcement learning.</p>
+                <div class="publication-links"><a href="https://openreview.net/forum?id=zJUEYr5X1X" aria-label="Read CAREL">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/ArminS03/CAREL" aria-label="View the CAREL source code">Code <span aria-hidden="true">↗</span></a></div>
+            </article>
+        </div>
+        <div class="publication-footer">
+            <p>For the complete publication record, visit Dr. Mahdieh Soleymani's profile.</p>
+            <a class="button button-primary" href="https://scholar.google.com/citations?user=S1U0KlgAAAAJ&amp;hl=en&amp;oi=sra">View all on Google Scholar <span aria-hidden="true">↗</span></a>
+        </div>
     </div>
 </section>
 

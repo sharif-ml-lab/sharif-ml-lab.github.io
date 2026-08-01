@@ -58,8 +58,6 @@
     var target = document.querySelector(heading.getAttribute("data-target"));
     if (!target) return;
     var isCurrentGroup = target.id === "phd-students" || target.id === "msc-students";
-    heading.setAttribute("role", "button");
-    heading.setAttribute("tabindex", "0");
     heading.setAttribute("aria-expanded", String(isCurrentGroup));
     target.classList.toggle("show", isCurrentGroup);
 
@@ -69,12 +67,6 @@
       target.classList.toggle("show", open);
     }
     heading.addEventListener("click", togglePeopleGroup);
-    heading.addEventListener("keydown", function (event) {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        togglePeopleGroup();
-      }
-    });
   });
 
   document.querySelectorAll("#people .card").forEach(function (card) {
