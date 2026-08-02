@@ -46,12 +46,43 @@
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
         navLinks.forEach(function (link) {
-          link.classList.toggle("active", link.getAttribute("href") === "#" + entry.target.id);
+          var href = link.getAttribute("href");
+          if (href && href.charAt(0) === "#") link.classList.toggle("active", href === "#" + entry.target.id);
         });
       });
     }, { rootMargin: "-30% 0px -62% 0px", threshold: 0 });
     observedSections.forEach(function (section) { sectionObserver.observe(section); });
   }
+
+  var publicationTopicLinks = Array.prototype.slice.call(document.querySelectorAll(".topic-index a[href^='#']"));
+  var publicationSections = Array.prototype.slice.call(document.querySelectorAll(".publication-category[id]"));
+
+  function setActivePublicationTopic(id) {
+    publicationTopicLinks.forEach(function (link) {
+      var active = link.getAttribute("href") === "#" + id;
+      link.classList.toggle("active", active);
+      if (active) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
+  }
+
+  if (publicationTopicLinks.length && publicationSections.length) {
+    setActivePublicationTopic(publicationSections[0].id);
+    if ("IntersectionObserver" in window) {
+      var publicationObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) setActivePublicationTopic(entry.target.id);
+        });
+      }, { rootMargin: "-28% 0px -62% 0px", threshold: 0 });
+      publicationSections.forEach(function (section) { publicationObserver.observe(section); });
+    }
+  }
+
+  document.querySelectorAll(".paper-card").forEach(function (card) {
+    var venue = card.querySelector(".paper-meta span:last-child");
+    var year = venue && venue.textContent.match(/\b20\d{2}\b/);
+    if (year) card.setAttribute("data-year", year[0]);
+  });
 
   var peopleToggles = Array.prototype.slice.call(document.querySelectorAll("#people [data-toggle='collapse']"));
   peopleToggles.forEach(function (heading) {
